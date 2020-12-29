@@ -36,7 +36,7 @@ namespace TeamCityDemo
             element.SendKeys("Brother International");
             
             var button = driver.FindElement(By.Name("btnK"));
-            while (!button.Displayed) ;
+            //while (!button.Displayed) ;
             button.Click();
             Console.WriteLine("Searched Google for Brother");
 
