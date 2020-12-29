@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Interactions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,10 +35,8 @@ namespace TeamCityDemo
         {
             var element = driver.FindElement(By.ClassName("gLFyf"));
             element.SendKeys("Brother International");
-            
-            var button = driver.FindElement(By.Name("btnK"));
-            //while (!button.Displayed) ;
-            button.Click();
+            element.SendKeys(Keys.Return);
+
             Console.WriteLine("Searched Google for Brother");
 
             var elements = driver.FindElements(By.ClassName("g"));
